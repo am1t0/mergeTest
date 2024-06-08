@@ -1,4 +1,4 @@
-console.log('Intro to Javascript');
+let ans = "Amit ji"
 
 console.log('in the middle of everything...')
 
