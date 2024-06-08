@@ -1,3 +1,3 @@
-console.log('Intro to JS');
+let ans = "Amit ji"
 
-alert('Intro to Js');
+alert('Intro to Javascript');
