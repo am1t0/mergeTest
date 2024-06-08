@@ -1,27 +1,14 @@
 
-
-let p = new Promise((resolve,reject)=>{
-     setTimeout(()=>{
-         console.log('Ok ji ')
-         resolve(1);
-     },1000)
-})
-
-p.then((value)=>{
-    console.log('resolved 1');
+function RicePromise(){
+    const bucket = ['biscuits','chips','vegies','salt','newItem','aftrica','t20WC','ICC']
     return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-             console.log('reolved1 ke ander')
-             resolve(1111)
-        },1000)
+     if(bucket.includes('vegies') && bucket.includes('salt'))
+          resolve({value:'friedRice'})
+      else 
+          reject('not possible');   
     })
-}).then((value)=>{
-    console.log('first handler ka resolved vlaue',value);
-})
-
-p.then((value)=>{
-    console.log('resolved 2');
-    return 22222222222;
-}).then((value)=>{
-    console.log('iske pehele wale handler se koi bhi value reslove me ni isliye old hi rahega value 1 ',1);
-})
+ }
+ 
+ RicePromise().then((value)=>{
+     console.log('value',value);
+ }).catch((error)=> console.log(error))
